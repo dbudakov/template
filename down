@@ -1,0 +1,3 @@
+a=$(pwd|awk -F "/" '{print $NF}')
+id=$(VBoxManage list vms|awk '/'$a'/ {print $2}')
+VBoxManage controlvm $id poweroff
