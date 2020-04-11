@@ -1,5 +1,4 @@
 #!/bin/bash
-
 a=$(pwd|awk -F "/" '{print $NF}')
 if [ -z $1 ]
         then
@@ -7,7 +6,7 @@ if [ -z $1 ]
                 then
                 id=$(VBoxManage list vms|awk '/'$a'/ {print $2}')
                 else
-                        echo which is down?
+                        echo -e "\e[31which is down?\e[0m"
                         VBoxManage list vms|awk '/'$a'/ {print $0}'|nl
                         echo -n "print number(1 or 2 or ...):"
                         read u
