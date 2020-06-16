@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby:
 Vagrant.configure("2") do |config|
-	congig.vm.define "os" do |os|
+	config.vm.define "os" do |os|
 		os.vm.box = ""
 		os.vm.host_name = ""
 		os.vm.network  "", ip: ''
