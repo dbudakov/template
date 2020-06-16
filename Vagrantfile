@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
 		os.vm.host_name = ""
 		os.vm.network  "", ip: ''
 		os.vm.provider :virtualbox do |vb|
+			vb.name = ""
 			vb.customize ["modifyvm", :id, "--memory", "256"]
 		end
 		os.vm.provision "shell", inline: <<SHELL
