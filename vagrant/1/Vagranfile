@@ -4,14 +4,14 @@
 cpu = "1"
 mem = "512"
 box = "centos/7"
-name_host = ""
+hostname = ""
 network = ''
 network_vlan = "private_network"
 
 Vagrant.configure("2") do |config|
         config.vm.define "os" do |os|
                 os.vm.box = box
-                os.vm.host_name = name_host
+                os.vm.host_name = hostname
                 os.vm.network  network_vlan, ip: network
                 os.vm.provider :virtualbox do |vb|
                         vb.name = name_host
